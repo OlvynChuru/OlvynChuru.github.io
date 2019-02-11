@@ -1,21 +1,24 @@
 #name {
     font-family: 'Helvetica', sans-serif;
     text-align: center;
-    color: black;
+    color: 80868b;
     font-size: 72px;
 }
 #header {
-    background-color: e0e0ff;
+    background-color: f1f3f4;
     width: 100%;
 }
 h3 {
     font-family: 'Helvetica', sans-serif;
     font-size: 50px;
     line-height: 10px;
+	color: 80868b;
 }
 p, ul {
     font-family: 'Helvetica', sans-serif;
     padding: 0% 5% 0% 5%;
+	color: 40464b;
+	#font-weight: bold;
 }
 #bio {
     display: block;
