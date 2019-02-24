@@ -23,9 +23,17 @@ function loadDoc() {
       document.getElementById("demo").innerHTML = this.responseText;
     }
   };
-  xhttp.open("POST", "demo_post2.asp", true);
-  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  xhttp.send("fname=Henry&lname=Ford");
+  const config = {
+      client_secret:'27e379779a4936b06d782e9ec8a64203ba99eea6'
+      time_limit:5,
+      memory_limit:323244,
+      source:'print(5)',
+	  input:"",
+      lang:"PYTHON"
+  };
+  xhttp.open("POST", "http://api.hackerearth.com/code/run/", true);
+//  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xhttp.send(config);
 }
 </script>
     </body>
