@@ -1,12 +1,21 @@
-#name {
+#me_name {
     font-family: 'Helvetica', sans-serif;
     text-align: center;
     color: 80868b;
     font-size: 72px;
 }
-#header {
+#me_header {
     background-color: f1f3f4;
     width: 100%;
+}
+#me_subheader {
+    display: block;
+    width: 70%;
+    float: right;
+}
+
+#me_invisible_variable_1 {
+    visibility: hidden;
 }
 h3 {
     font-family: 'Helvetica', sans-serif;
@@ -20,8 +29,11 @@ p, ul {
 	color: 40464b;
 	#font-weight: bold;
 }
-#bio {
+textarea {
+    font-family: 'Helvetica', sans-serif;
     display: block;
-    width: 70%;
-    float: right;
+//    float: right;
+#    text-align: center;
+	color: 40464b;
 }
+
