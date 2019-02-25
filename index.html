@@ -32,7 +32,7 @@ function loadDoc() {
       lang:"PYTHON"
   };
   xhttp.open("POST", "https://api.hackerearth.com/code/run/", true);
-//  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xhttp.setRequestHeader("Content-type", "application/javascript");
   xhttp.send(config);
 }
 </script>
