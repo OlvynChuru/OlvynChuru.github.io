@@ -55,21 +55,350 @@ function runit(meinput, meoutput) {
 	   mypre.innerHTML = mypre.innerHTML + err.toString();
    });
 
+   
+   
 } 
+
+var alosa = 5;
 </script> 
-<form> 
-<textarea id="meinpython0001" cols="40" rows="10">
+
+<form>
+<div id="me_code_section"> <h4>1. Introduction</h4> </div>
+<textarea id="meinpython1" cols="100" rows="10">
+# Welcome!
+
+"""
+Python code in this website is run in Python 2, but the website also has code examples using Python 3 - exclusive code.
+Code lines that only work in one version of Python will be commented out. Anything that says PYTHON 2 ONLY will run on
+this website when you remove the #s from the line.
+"""
+
 print('Naroosh')
-</textarea><br /> 
-<button type="button" onclick="runit('meinpython0001','meoutpython0001')">Run</button> 
+</textarea>
+<br>
+<button type="button" onclick="runit('meinpython1','meoutpython1')">Run</button> 
 </form> 
-<pre id="meoutpython0001" ></pre> 
+<pre id="meoutpython1" ></pre>
+<br>
+
+<form>
+<div id="me_code_section"> <h4>2. Print Continued</h4> </div>
+<textarea id="meinpython2" cols="100" rows="10">
+
+print('Naroosh')
+print("Naroosh")
+#print "Naroosh" # PYTHON 2 ONLY
+
+#print ("Nerash", end = " ") # PYTHON 3 ONLY
+print ("Noraash", "Niresh")
+
+print("")
+
+print ("\tNora\\ash\n \"Niresh\"")
+</textarea>
+<br>
+<button type="button" onclick="runit('meinpython2','meoutpython2')">Run</button> 
+</form> 
+<pre id="meoutpython2" ></pre>
+<br>
+
 <form> 
-<textarea id="meinpython0002" cols="40" rows="10">
-print('Uh oh
-</textarea><br /> 
-<button type="button" onclick="runit('meinpython0002','meoutpython0002')">Run</button> 
+<div id="me_code_section"> <h4>3. Arithmetic</h4> </div>
+<textarea id="meinpython3" cols="100" rows="10">
+a = 16
+b = 5
+c = a + b
+print(c)
+print(a - b)
+print(a * b)
+
+print(a / b)
+# In Python 2, 16 / 5 evaluates to 3
+# In Python 3, 16 / 5 evaluates to 3.2
+
+print(a // b)
+print(a % b)
+print(a == b)
+print(a != b)
+print(a ** 2)
+print(a ** .5)
+print(7 + 7.5)
+print(int(7 + 7.5))
+print(float(8))
+print(str(7) + str(7))
+print("8" + "8")
+#print("8" + "8") # CAUSES AN ERROR
+</textarea>
+<br> 
+<button type="button" onclick="runit('meinpython3','meoutpython3')">Run</button> 
 </form> 
-<pre id="meoutpython0002" ></pre> 
+<pre id="meoutpython3" ></pre> 
+<br>
+
+<form>
+<div id="me_code_section"> <h4>4. Strings</h4> </div>
+<textarea id="meinpython4" cols="100" rows="10">
+nar = "  Naroosh  "
+print(nar)
+print(len(nar))
+print(nar[2])
+#nar[2] = 'B' # CAUSES AN ERROR
+print(nar[3:7])
+nar = nar.strip()
+print(nar)
+nar = nar.upper()
+print(nar)
+nar = nar.lower()
+print(nar)
+nar = nar.title()
+print(nar)
+print(nar.split("r"))
+print(nar.replace("r","\n"))
+
+</textarea>
+<br>
+<button type="button" onclick="runit('meinpython4','meoutpython4')">Run</button> 
+</form> 
+<pre id="meoutpython4" ></pre>
+<br>
+
+<form>
+<div id="me_code_section"> <h4>5. Lists</h4> </div>
+<textarea id="meinpython5" cols="100" rows="10">
+things = ['uga', 'aro', 'ali', 'kol', 5, ['faga', 5]]
+print(things)
+print(len(things))
+print(things[1])
+print(things[5][0][0])
+things[0] = 'ite'
+print(things)
+
+
+
+print("ali" in things)
+print("ARO" in things)
+
+things.append('goa')
+print(things)
+
+things.insert(2, 'goa')
+print(things)
+
+del things[4]
+print(things)
+
+print(things.pop(0))
+print(things)
+    
+things.remove('goa')
+print(things)
+
+things += ['edh', 'zee', 'edh']
+
+print(things)
+
+slic = things[1:4]
+print(slic)
+
+things[1] = 'ila'
+print(things)
+print(slic)
+
+slic2 = things[0:6:2]
+print(slic2)
+
+slic3 = things[:]
+print(slic3)
+
+nums = [2, 1, 3, 4, 5, 6, 7, 9, 8]
+print(min(nums))
+print(max(nums))
+
+many_zeroes = [0] * 15
+print(many_zeroes)
+</textarea>
+<br>
+<button type="button" onclick="runit('meinpython5','meoutpython5')">Run</button> 
+</form> 
+<pre id="meoutpython5" ></pre>
+<br>
+
+<form>
+<div id="me_code_section"> <h4>6. Loops</h4> </div>
+<textarea id="meinpython6" cols="100" rows="10">
+
+i = 0
+while i < 5:
+	print(i)
+	i = i + 1
+
+print("")
+
+for i in range(9):
+	print(i)
+
+print("")
+
+for i in range(2, 9):
+	print(i)
+
+print("")
+
+for i in range(2, 9, 2):
+	print(i)
+
+print("")
+
+for i in range(9):
+	if i == 3:
+		break
+	else:
+		print(i)
+
+print("")		
+		
+things = ['uga', 'aro', 'ali', 'kol', 'usa', ['faga', 'zan']]
+for i in things:
+	print(i)
+	
+print("")
+
+for i in range(len(things)):
+	for j in range(len(things[i])):
+		print(things[i][j])
+	print("")
+
+</textarea>
+<br>
+<button type="button" onclick="runit('meinpython6','meoutpython6')">Run</button> 
+</form> 
+<pre id="meoutpython6" ></pre>
+<br>
+
+<form>
+<div id="me_code_section"> <h4>7. Functions</h4> </div>
+<textarea id="meinpython7" cols="100" rows="10">
+def add_two_to_list(thelistthing):
+    for i in range(len(thelistthing)):
+        thelistthing[i] += 2
+
+nums = [2, 1, 3, 4, 5, 6, 7, 9, 8]
+
+add_two_to_list(nums)
+print(nums)
+
+#print(get_three_higher(20)) # CAUSES AN ERROR
+def get_three_higher(efala = 1):
+	efala += 3
+	return efala
+
+print(get_three_higher(20))
+print(get_three_higher())
+</textarea>
+<br>
+<button type="button" onclick="runit('meinpython7','meoutpython7')">Run</button> 
+</form> 
+<pre id="meoutpython7" ></pre>
+<br>
+
+<form>
+<div id="me_code_section"> <h4>8. Conditions</h4> </div>
+<textarea id="meinpython8" cols="100" rows="10">
+def vakren(qua):
+	if qua > 4:
+		return("Yiffer")
+	elif (qua == 3):
+		return("Nuffer")
+	else:
+		return("Leffer")
+for i in range(9):
+	print(vakren(i))
+</textarea>
+<br>
+<button type="button" onclick="runit('meinpython8','meoutpython8')">Run</button> 
+</form> 
+<pre id="meoutpython8" ></pre>
+<br>
+
+<form>
+<div id="me_code_section"> <h4>9. Sets</h4> </div>
+<textarea id="meinpython9" cols="100" rows="10">
+the_set = {'roo', 'lan', 'wro',8}
+print(the_set)
+print(len(the_set))
+#print(the_set[1]) # CAUSES AN ERROR
+for i in the_set:
+    print(i)
+    
+print("roo" in the_set)
+print("LAN" in the_set)
+print(4 + 4 in the_set)
+print(8.0 in the_set)
+the_set.add('siya')
+print(the_set)
+the_set.add('roo')
+print(the_set)
+the_set.remove("roo")
+print(the_set)
+the_set.discard('lan')
+print(the_set)
+#the_set.remove('baanos') # CAUSES AN ERROR
+the_set.discard('baanos')
+print(the_set)
+the_set.update(['nisla',"rarori","Quoe"])
+print(the_set)
+#popped = the_set.pop('nisla') # CAUSES AN ERROR
+popped = the_set.pop()
+print(popped)
+print(the_set)
+#the_set.clear() # PYTHON 3 ONLY
+print(the_set)
+</textarea>
+<br>
+<button type="button" onclick="runit('meinpython9','meoutpython9')">Run</button> 
+</form> 
+<pre id="meoutpython9" ></pre>
+<br>
+
+<form>
+<div id="me_code_section"> <h4>10. Dictionaries</h4> </div>
+<textarea id="meinpython10" cols="100" rows="10">
+books = {
+        'book1': 'Iti the Soolar',
+        'book2': 'The Best Argabil',
+        'book3': 'Totally Booked' }
+print(books)
+print(books.keys())
+print(books.values())
+print(books.get("book3"))
+print(books["book3"])
+books["book3"] = "Vanarlahan"
+print(books["book3"])
+books["book4"] = "Natoi Nuna: Why You Should Oogleshoozle"
+for ID, title in books.items():
+    print(ID + ": " + title)
+</textarea>
+<br>
+<button type="button" onclick="runit('meinpython10','meoutpython10')">Run</button> 
+</form> 
+<pre id="meoutpython10" ></pre>
+<br>
+
+<script type="text/javascript"> 
+
+var i = 1;
+var moreSections = true;
+var section;
+while (moreSections == true) {
+	section = document.getElementById("meinpython" + i);
+	if (section != null) {
+		section.rows = section.innerHTML.match(/\n/g).length + 1;
+	}
+	else {
+		moreSections = false;
+	}
+	i++;
+}
+</script> 
     </body>
 </html>
