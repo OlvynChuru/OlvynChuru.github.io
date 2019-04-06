@@ -9,13 +9,33 @@
 		<script src="JS/skulpt-stdlib.js" type="text/javascript"></script>
 	</head>
     <body bgcolor="#f1f3f4">
-        <div id="me_header">
-            <h1 id="me_name">Isharine Code</h1>
-        </div>
-        <div id="me_subheader">
-        <h3>Code Examples</h3>
-		<h1 id="me_invisible_variable_1">A hidden text field used to temporarily store output.</h1>
-        </div>
+
+        <h1 id="me_header">Isharine Code</h1>
+		
+        <h3 id="me_subheader">Python Code Examples</h3>
+
+		<textarea id="me_invisible_variable_1">A hidden text field used to temporarily store output.</textarea>	
+		<div id="me_navbar">
+			<h4 color="#303030" id="melinkpythontitle">Python Code Examples<h5>
+			<br>
+			<a class="mesectionlink" id="melinkpython1" href="#mescpython1"></a> <br><br>
+			<a class="mesectionlink" id="melinkpython2" href="#mescpython2"></a> <br><br>
+			<a class="mesectionlink" id="melinkpython3" href="#mescpython3"></a> <br><br>
+			<a class="mesectionlink" id="melinkpython4" href="#mescpython4"></a> <br><br>
+			<a class="mesectionlink" id="melinkpython5" href="#mescpython5"></a> <br><br>
+			<a class="mesectionlink" id="melinkpython6" href="#mescpython6"></a> <br><br>
+			<a class="mesectionlink" id="melinkpython7" href="#mescpython7"></a> <br><br>
+			<a class="mesectionlink" id="melinkpython8" href="#mescpython8"></a> <br><br>
+			<a class="mesectionlink" id="melinkpython9" href="#mescpython9"></a> <br><br>
+			<a class="mesectionlink" id="melinkpython10" href="#mescpython10"></a> <br><br>
+			<a class="mesectionlink" id="melinkpython11" href="#mescpython11"></a> <br><br>
+			<a class="mesectionlink" id="melinkpython12" href="#mescpython12"></a> <br><br>
+			<a class="mesectionlink" id="melinkpython13" href="#mescpython13"></a> <br><br>
+			<a class="mesectionlink" id="melinkpython14" href="#mescpython14"></a> <br><br>
+			<a class="mesectionlink" id="melinkpython15" href="#mescpython15"></a> <br><br>
+			<a class="mesectionlink" id="melinkpython16" href="#mescpython16"></a> <br><br>
+
+		</div>
 <script type="text/javascript"> 
 // output functions are configurable.  This one just appends some text
 // to a pre element.
@@ -59,32 +79,36 @@ function runit(meinput, meoutput) {
    
 } 
 
-var alosa = 5;
 </script> 
 
-<form>
-<div id="me_code_section"> <h4>1. Introduction</h4> </div>
-<textarea id="meinpython1" cols="100" rows="10">
+<form class="meinoutarea">
+<div id="me_code_section">  <h4 id="mescpython1">1. Introduction</h4> </div>
+<textarea class="meinputarea" id="meinpython1" cols="65" rows="10">
 # Welcome!
 
 """
-Python code in this website is run in Python 2, but the website also has code examples using Python 3 - exclusive code.
-Code lines that only work in one version of Python will be commented out. Anything that says PYTHON 2 ONLY will run on
-this website when you remove the #s from the line.
+Python code in this website is run in Python 2, but the website also
+has code examples using Python 3 - exclusive code. Code lines that only
+work in one version of Python will be commented out. Anything that says
+PYTHON 2 ONLY will run on this website when you remove the #s from the line.
 """
 
-print('Naroosh')
+import this
+
 </textarea>
-<br>
-<button type="button" onclick="runit('meinpython1','meoutpython1')">Run</button> 
+<button type="button" onclick="runit('meinpython1','meoutpython1')">Run</button>
+<pre class="meoutputarea" id="meoutpython1" ></pre> 
 </form> 
-<pre id="meoutpython1" ></pre>
+
 <br>
 
-<form>
-<div id="me_code_section"> <h4>2. Print Continued</h4> </div>
-<textarea id="meinpython2" cols="100" rows="10">
+<form class="meinoutarea">
+<div id="me_code_section">  <h4 id="mescpython2">2. Print</h4> </div>
+<textarea class="meinputarea" id="meinpython2" cols="65" rows="10">
 print('Naroosh')
+
+print("")
+
 print("Naroosh")
 #print "Naroosh" # PYTHON 2 ONLY
 
@@ -95,15 +119,15 @@ print("")
 
 print ("\tNora\\ash\n \"Niresh\"")
 </textarea>
-<br>
 <button type="button" onclick="runit('meinpython2','meoutpython2')">Run</button> 
+<pre class="meoutputarea" id="meoutpython2" ></pre>
 </form> 
-<pre id="meoutpython2" ></pre>
+
 <br>
 
-<form> 
-<div id="me_code_section"> <h4>3. Arithmetic and Data Types</h4> </div>
-<textarea id="meinpython3" cols="100" rows="10">
+<form class="meinoutarea"> 
+<div id="me_code_section"> <h4 id="mescpython3">3. Arithmetic and Data Types</h4> </div>
+<textarea class="meinputarea" id="meinpython3" cols="65" rows="10">
 a = 16
 b = 5
 c = a + b
@@ -149,15 +173,15 @@ print("8" + "8")
 
 
 </textarea>
-<br> 
 <button type="button" onclick="runit('meinpython3','meoutpython3')">Run</button> 
+
+<pre class="meoutputarea" id="meoutpython3" ></pre> 
 </form> 
-<pre id="meoutpython3" ></pre> 
 <br>
 
-<form>
-<div id="me_code_section"> <h4>4. Strings</h4> </div>
-<textarea id="meinpython4" cols="100" rows="10">
+<form class="meinoutarea">
+<div id="me_code_section">  <h4 id="mescpython4">4. Strings</h4> </div>
+<textarea class="meinputarea" id="meinpython4" cols="65" rows="10">
 nar = "Naroosh noreesh"
 print(nar)
 print(len(nar))
@@ -207,15 +231,16 @@ print("noree".islower())
 print("NOREE".isupper())
 
 </textarea>
-<br>
+
 <button type="button" onclick="runit('meinpython4','meoutpython4')">Run</button> 
+
+<pre class="meoutputarea" id="meoutpython4" ></pre>
 </form> 
-<pre id="meoutpython4" ></pre>
 <br>
 
-<form>
-<div id="me_code_section"> <h4>5. Lists</h4> </div>
-<textarea id="meinpython5" cols="100" rows="10">
+<form class="meinoutarea">
+<div id="me_code_section">  <h4 id="mescpython5">5. Lists</h4> </div>
+<textarea class="meinputarea" id="meinpython5" cols="65" rows="10">
 things = ['uga', 'aro', 'ali', 'kol', 5, ['faga', 5]]
 print(things)
 print(len(things))
@@ -302,15 +327,16 @@ many_zeroes = [0] * 15
 print(many_zeroes)
 
 </textarea>
-<br>
+
 <button type="button" onclick="runit('meinpython5','meoutpython5')">Run</button> 
+
+<pre class="meoutputarea" id="meoutpython5" ></pre>
 </form> 
-<pre id="meoutpython5" ></pre>
 <br>
 
-<form>
-<div id="me_code_section"> <h4>6. Loops</h4> </div>
-<textarea id="meinpython6" cols="100" rows="10">
+<form class="meinoutarea">
+<div id="me_code_section">  <h4 id="mescpython6">6. Loops</h4> </div>
+<textarea class="meinputarea" id="meinpython6" cols="65" rows="10">
 
 i = 0
 while i < 5:
@@ -362,15 +388,16 @@ print(next(ree))
 """
 
 </textarea>
-<br>
+
 <button type="button" onclick="runit('meinpython6','meoutpython6')">Run</button> 
+
+<pre class="meoutputarea" id="meoutpython6" ></pre>
 </form> 
-<pre id="meoutpython6" ></pre>
 <br>
 
-<form>
-<div id="me_code_section"> <h4>7. Functions</h4> </div>
-<textarea id="meinpython7" cols="100" rows="10">
+<form class="meinoutarea">
+<div id="me_code_section">  <h4 id="mescpython7">7. Functions</h4> </div>
+<textarea class="meinputarea" id="meinpython7" cols="65" rows="10">
 def add_two_to_list(thelistthing):
     for i in range(len(thelistthing)):
         thelistthing[i] += 2
@@ -388,15 +415,16 @@ def get_three_higher(efala = 1):
 print(get_three_higher(20))
 print(get_three_higher())
 </textarea>
-<br>
+
 <button type="button" onclick="runit('meinpython7','meoutpython7')">Run</button> 
-</form> 
-<pre id="meoutpython7" ></pre>
+ 
+<pre class="meoutputarea" id="meoutpython7" ></pre>
+</form>
 <br>
 
-<form>
-<div id="me_code_section"> <h4>8. Conditions</h4> </div>
-<textarea id="meinpython8" cols="100" rows="10">
+<form class="meinoutarea">
+<div id="me_code_section">  <h4 id="mescpython8">8. Conditions</h4> </div>
+<textarea class="meinputarea" id="meinpython8" cols="65" rows="10">
 def vakren(qua):
 	if qua > 4:
 		return("Yiffer")
@@ -407,15 +435,16 @@ def vakren(qua):
 for i in range(9):
 	print(vakren(i))
 </textarea>
-<br>
+
 <button type="button" onclick="runit('meinpython8','meoutpython8')">Run</button> 
+
+<pre class="meoutputarea" id="meoutpython8" ></pre>
 </form> 
-<pre id="meoutpython8" ></pre>
 <br>
 
-<form>
-<div id="me_code_section"> <h4>9. Sets</h4> </div>
-<textarea id="meinpython9" cols="100" rows="10">
+<form class="meinoutarea">
+<div id="me_code_section">  <h4 id="mescpython9">9. Sets</h4> </div>
+<textarea class="meinputarea" id="meinpython9" cols="65" rows="10">
 the_set = {'roo', 'lan', 'wro',8}
 print(the_set)
 print(len(the_set))
@@ -469,15 +498,16 @@ print({2, 4, 9, 17}.issuperset({2, 4, 9}))
 #many_zeroes = {0} * 15 # CAUSES AN ERROR
 #print(many_zeroes)
 </textarea>
-<br>
+
 <button type="button" onclick="runit('meinpython9','meoutpython9')">Run</button> 
+
+<pre class="meoutputarea" id="meoutpython9" ></pre>
 </form> 
-<pre id="meoutpython9" ></pre>
 <br>
 
-<form>
-<div id="me_code_section"> <h4>10. Dictionaries</h4> </div>
-<textarea id="meinpython10" cols="100" rows="10">
+<form class="meinoutarea">
+<div id="me_code_section">  <h4 id="mescpython10">10. Dictionaries</h4> </div>
+<textarea class="meinputarea" id="meinpython10" cols="65" rows="10">
 books = {
         'book1': 'Iti the Soolar',
         'book2': 'The Best Argabil',
@@ -509,15 +539,16 @@ print("")
 for ID, title in books.items():
     print(ID + ": " + title)
 </textarea>
-<br>
+
 <button type="button" onclick="runit('meinpython10','meoutpython10')">Run</button> 
+
+<pre class="meoutputarea" id="meoutpython10" ></pre>
 </form> 
-<pre id="meoutpython10" ></pre>
 <br>
 
-<form>
-<div id="me_code_section"> <h4>11. Tuples</h4> </div>
-<textarea id="meinpython11" cols="100" rows="10">
+<form class="meinoutarea">
+<div id="me_code_section">  <h4 id="mescpython11">11. Tuples</h4> </div>
+<textarea class="meinputarea" id="meinpython11" cols="65" rows="10">
 arsoo = ("ul", "oa", 6)
 print(arsoo)
 print(len(arsoo))
@@ -540,15 +571,16 @@ print(next(ree))
 #print(next(ree)) # CAUSES AN ERROR
 """
 </textarea>
-<br>
+
 <button type="button" onclick="runit('meinpython11','meoutpython11')">Run</button> 
+
+<pre class="meoutputarea" id="meoutpython11" ></pre>
 </form> 
-<pre id="meoutpython11" ></pre>
 <br>
 
-<form>
-<div id="me_code_section"> <h4>12. Classes</h4> </div>
-<textarea id="meinpython12" cols="100" rows="10">
+<form class="meinoutarea">
+<div id="me_code_section">  <h4 id="mescpython12">12. Classes</h4> </div>
+<textarea class="meinputarea" id="meinpython12" cols="65" rows="10">
 class luwaga:
     # The __init__ function has a special meaning.
     #  Make sure to call it __init__.
@@ -584,15 +616,16 @@ print(orgat.facing_direction)
 orgat.size = 13
 print(orgat.size)
 </textarea>
-<br>
+
 <button type="button" onclick="runit('meinpython12','meoutpython12')">Run</button> 
+
+<pre class="meoutputarea" id="meoutpython12" ></pre>
 </form> 
-<pre id="meoutpython12" ></pre>
 <br>
 
-<form>
-<div id="me_code_section"> <h4>13. Inheritance</h4> </div>
-<textarea id="meinpython13" cols="100" rows="10">
+<form class="meinoutarea">
+<div id="me_code_section">  <h4 id="mescpython13">13. Inheritance</h4> </div>
+<textarea class="meinputarea" id="meinpython13" cols="65" rows="10">
 class luwaga:
     def __init__(this, size, facing_direction = "Up"):
         this.size = size
@@ -639,15 +672,16 @@ print(orgat.size)
 class iluwaga(luwaga):
 	pass
 </textarea>
-<br>
+
 <button type="button" onclick="runit('meinpython13','meoutpython13')">Run</button> 
+
+<pre class="meoutputarea" id="meoutpython13" ></pre>
 </form> 
-<pre id="meoutpython13" ></pre>
 <br>
 
-<form>
-<div id="me_code_section"> <h4>14. Error Handling</h4> </div>
-<textarea id="meinpython14" cols="100" rows="10">
+<form class="meinoutarea">
+<div id="me_code_section">  <h4 id="mescpython14">14. Error Handling</h4> </div>
+<textarea class="meinputarea" id="meinpython14" cols="65" rows="10">
 try:
 	print("Are you using Python 2?")
 	{5}.clear() # PYTHON 3 ONLY
@@ -678,15 +712,16 @@ finally:
 	print("You will see this regardless of whether there's an error.")
 """
 </textarea>
-<br>
+
 <button type="button" onclick="runit('meinpython14','meoutpython14')">Run</button> 
+
+<pre class="meoutputarea" id="meoutpython14" ></pre>
 </form> 
-<pre id="meoutpython14" ></pre>
 <br>
 
-<form>
-<div id="me_code_section"> <h4>15. Regular Expressions</h4> </div>
-<textarea id="meinpython15" cols="100" rows="10">
+<form class="meinoutarea">
+<div id="me_code_section">  <h4 id="mescpython15">15. Regular Expressions</h4> </div>
+<textarea class="meinputarea" id="meinpython15" cols="65" rows="10">
 import re
 print(re.findall("o","Aenoroon"))
 print(re.split("o","Aenoroon"))
@@ -699,15 +734,16 @@ print(re.search("A","Aenoroon").group())
 #print(re.sub("o","e","Aenoroon")) # PYTHON 3 ONLY
 #print(re.sub("o","e","Aenoroon",1)) # PYTHON 3 ONLY
 </textarea>
-<br>
+
 <button type="button" onclick="runit('meinpython15','meoutpython15')">Run</button> 
+
+<pre class="meoutputarea" id="meoutpython15" ></pre>
 </form> 
-<pre id="meoutpython15" ></pre>
 <br>
 
-<form>
-<div id="me_code_section"> <h4>16. Lambda Functions</h4> </div>
-<textarea id="meinpython16" cols="100" rows="10">
+<form class="meinoutarea">
+<div id="me_code_section">  <h4 id="mescpython16">16. Lambda Functions</h4> </div>
+<textarea class="meinputarea" id="meinpython16" cols="65" rows="10">
 def addx(x):
 	return lambda y : y + x
 
@@ -717,10 +753,11 @@ addsix = addx(7)
 print(addfive(7))
 print(addsix(14))
 </textarea>
-<br>
+
 <button type="button" onclick="runit('meinpython16','meoutpython16')">Run</button> 
+
+<pre class="meoutputarea" id="meoutpython16" ></pre>
 </form> 
-<pre id="meoutpython16" ></pre>
 <br>
 
 <script type="text/javascript"> 
@@ -728,10 +765,18 @@ print(addsix(14))
 var i = 1;
 var moreSections = true;
 var section;
+var section_link;
+var section_title;
 while (moreSections == true) {
 	section = document.getElementById("meinpython" + i);
+
 	if (section != null) {
 		section.rows = section.innerHTML.match(/\n/g).length + 1;
+		section_link = document.getElementById("melinkpython" + i);
+		section_title = document.getElementById("mescpython" + i);
+		if (section_link != null && section_title != null) {
+			section_link.innerHTML = section_title.innerHTML;
+		}
 	}
 	else {
 		moreSections = false;
