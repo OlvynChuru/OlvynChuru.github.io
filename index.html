@@ -14,7 +14,10 @@
 		
         <h3 id="me_subheader">Python Code Examples</h3>
 
-		<textarea id="me_invisible_variable_1">A hidden text field used to temporarily store output.</textarea>	
+		<textarea class="me_invisible_variable" id="meoutputstore">A hidden text field used to temporarily store output.</textarea>
+		<textarea class="me_invisible_variable" id="meselectionfield"></textarea>	
+		<textarea class="me_invisible_variable" id="meselectionprevious"></textarea>	
+		<textarea class="me_invisible_variable" id="meselectionstore"></textarea>	
 		<div id="me_navbar">
 			<h4 color="#303030" id="melinkpythontitle">Python Code Examples<h5>
 			<br>
@@ -40,7 +43,7 @@
 // output functions are configurable.  This one just appends some text
 // to a pre element.
 function outf(text) { 
-    var metemp = document.getElementById("me_invisible_variable_1"); 
+    var metemp = document.getElementById("meoutputstore"); 
 //	metemp.innerHTML = ''; 
 //    metemp.innerHTML = metemp.innerHTML + text; 
 	metemp.innerHTML = metemp.innerHTML + text;
@@ -56,8 +59,16 @@ function builtinRead(x) {
 // configure the output function
 // call Sk.importMainWithBody()
 function runit(meinput, meoutput) { 
-   document.getElementById("me_invisible_variable_1").innerHTML = ''; 
-   var prog = document.getElementById(meinput).value; 
+	document.getElementById("meoutputstore").innerHTML = ''; 
+	var prog = document.getElementById("meselectionstore").value;
+	var previous = document.getElementById("meselectionprevious").value;
+
+	console.log(meinput);
+	console.log(document.getElementById("meselectionfield").value);
+	if (prog == '' || prog == previous || meinput != document.getElementById("meselectionfield").value) {
+		prog = document.getElementById(meinput).value; 
+	}
+	
    var mypre = document.getElementById(meoutput); 
    mypre.innerHTML = ''; 
    Sk.pre = meoutput;
@@ -69,14 +80,14 @@ function runit(meinput, meoutput) {
    });
 
    myPromise.then(function(mod) {
-       mypre.innerHTML = mypre.innerHTML + document.getElementById("me_invisible_variable_1").innerHTML;
+       mypre.innerHTML = mypre.innerHTML + document.getElementById("meoutputstore").innerHTML;
    },
        function(err) {
 	   mypre.innerHTML = mypre.innerHTML + err.toString();
    });
 
-   
-   
+	document.getElementById("meselectionprevious").value = document.getElementById("meselectionstore").value;
+
 } 
 
 </script> 
@@ -105,6 +116,11 @@ import this
 <form class="meinoutarea">
 <div id="me_code_section">  <h4 id="mescpython2">2. Print</h4> </div>
 <textarea class="meinputarea" id="meinpython2" cols="65" rows="10">
+'''
+In Isharine Code, you can run parts of the code examples. Just
+highlight some of the code before running it.
+'''
+
 print('Naroosh')
 
 print("")
@@ -783,6 +799,32 @@ while (moreSections == true) {
 	}
 	i++;
 }
+
+function selectpart() {
+    var text = "";
+    var activeEl = document.activeElement;
+    var activeElTagName = activeEl ? activeEl.tagName.toLowerCase() : null;
+    if (
+      (activeElTagName == "textarea") || (activeElTagName == "input" &&
+      /^(?:text|search|password|tel|url)$/i.test(activeEl.type)) &&
+      (typeof activeEl.selectionStart == "number")
+    ) {
+        text = activeEl.value.slice(activeEl.selectionStart, activeEl.selectionEnd);
+    } else if (window.getSelection) {
+        text = window.getSelection().toString();
+    }
+	console.log(document.activeElement.id);
+	if (/mein.+[0-9]+/.test(document.activeElement.id) == true) {
+		document.getElementById("meselectionfield").value = document.activeElement.id;
+		console.log(document.getElementById("meselectionfield").value);
+	}
+    return text;
+}
+
+document.onmouseup = document.onkeyup = document.onselectionchange = function() {
+  document.getElementById("meselectionstore").value = selectpart();
+};
+
 </script> 
     </body>
 </html>
