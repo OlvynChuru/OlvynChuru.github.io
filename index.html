@@ -101,14 +101,22 @@ function runit(meinput, meoutput) {
 </script> 
 <form class="meinoutarea" id="meformpython1">
 <div id="me_code_section">  <h4 id="mescpython1">1. Introduction</h4> </div>
-<textarea class="meinputarea" id="meinpython1" cols="65" rows="10">
+<textarea class="meinputarea" id="meinpython1" cols="65" rows="10" height="180px">
 # Welcome!
+
+'''
+In Isharine Code, you can run parts of the code examples. Just
+highlight some of the code before running it. You can also
+modify the code.
+'''
 
 """
 Python code in this website is run in Python 2, but the website also
 has code examples using Python 3 - exclusive code. Code lines that only
 work in one version of Python will be commented out. Anything that says
 PYTHON 2 ONLY will run on this website when you remove the #s from the line.
+
+
 """
 
 import this
@@ -119,13 +127,9 @@ import this
 </form> 
 <br>
 
-<form class="meinoutarea">
+<form class="meinoutarea" id="meformpython2">
 <div id="me_code_section">  <h4 id="mescpython2">2. Print</h4> </div>
 <textarea class="meinputarea" id="meinpython2" cols="65" rows="10">
-'''
-In Isharine Code, you can run parts of the code examples. Just
-highlight some of the code before running it.
-'''
 
 print('Naroosh')
 
@@ -147,7 +151,7 @@ print ("\tNora\\ash\n \"Niresh\"")
 
 <br>
 
-<form class="meinoutarea"> 
+<form class="meinoutarea" id="meformpython3"> 
 <div id="me_code_section"> <h4 id="mescpython3">3. Arithmetic and Data Types</h4> </div>
 <textarea class="meinputarea" id="meinpython3" cols="65" rows="10">
 a = 16
@@ -201,7 +205,7 @@ print("8" + "8")
 </form> 
 <br>
 
-<form class="meinoutarea">
+<form class="meinoutarea" id="meformpython4">
 <div id="me_code_section">  <h4 id="mescpython4">4. Strings</h4> </div>
 <textarea class="meinputarea" id="meinpython4" cols="65" rows="10">
 nar = "Naroosh noreesh"
@@ -260,7 +264,7 @@ print("NOREE".isupper())
 </form> 
 <br>
 
-<form class="meinoutarea">
+<form class="meinoutarea" id="meformpython5">
 <div id="me_code_section">  <h4 id="mescpython5">5. Lists</h4> </div>
 <textarea class="meinputarea" id="meinpython5" cols="65" rows="10">
 things = ['uga', 'aro', 'ali', 'kol', 5, ['faga', 5]]
@@ -356,7 +360,7 @@ print(many_zeroes)
 </form> 
 <br>
 
-<form class="meinoutarea">
+<form class="meinoutarea" id="meformpython6">
 <div id="me_code_section">  <h4 id="mescpython6">6. Loops</h4> </div>
 <textarea class="meinputarea" id="meinpython6" cols="65" rows="10">
 
@@ -417,7 +421,7 @@ print(next(ree))
 </form> 
 <br>
 
-<form class="meinoutarea">
+<form class="meinoutarea" id="meformpython7">
 <div id="me_code_section">  <h4 id="mescpython7">7. Functions</h4> </div>
 <textarea class="meinputarea" id="meinpython7" cols="65" rows="10">
 def add_two_to_list(thelistthing):
@@ -444,7 +448,7 @@ print(get_three_higher())
 </form>
 <br>
 
-<form class="meinoutarea">
+<form class="meinoutarea" id="meformpython8">
 <div id="me_code_section">  <h4 id="mescpython8">8. Conditions</h4> </div>
 <textarea class="meinputarea" id="meinpython8" cols="65" rows="10">
 def vakren(qua):
@@ -464,7 +468,7 @@ for i in range(9):
 </form> 
 <br>
 
-<form class="meinoutarea">
+<form class="meinoutarea" id="meformpython9">
 <div id="me_code_section">  <h4 id="mescpython9">9. Sets</h4> </div>
 <textarea class="meinputarea" id="meinpython9" cols="65" rows="10">
 the_set = {'roo', 'lan', 'wro',8}
@@ -527,7 +531,7 @@ print({2, 4, 9, 17}.issuperset({2, 4, 9}))
 </form> 
 <br>
 
-<form class="meinoutarea">
+<form class="meinoutarea" id="meformpython10">
 <div id="me_code_section">  <h4 id="mescpython10">10. Dictionaries</h4> </div>
 <textarea class="meinputarea" id="meinpython10" cols="65" rows="10">
 books = {
@@ -568,7 +572,7 @@ for ID, title in books.items():
 </form> 
 <br>
 
-<form class="meinoutarea">
+<form class="meinoutarea" id="meformpython11">
 <div id="me_code_section">  <h4 id="mescpython11">11. Tuples</h4> </div>
 <textarea class="meinputarea" id="meinpython11" cols="65" rows="10">
 arsoo = ("ul", "oa", 6)
@@ -600,7 +604,7 @@ print(next(ree))
 </form> 
 <br>
 
-<form class="meinoutarea">
+<form class="meinoutarea" id="meformpython12">
 <div id="me_code_section">  <h4 id="mescpython12">12. Classes</h4> </div>
 <textarea class="meinputarea" id="meinpython12" cols="65" rows="10">
 class luwaga:
@@ -645,7 +649,7 @@ print(orgat.size)
 </form> 
 <br>
 
-<form class="meinoutarea">
+<form class="meinoutarea" id="meformpython13">
 <div id="me_code_section">  <h4 id="mescpython13">13. Inheritance</h4> </div>
 <textarea class="meinputarea" id="meinpython13" cols="65" rows="10">
 class luwaga:
@@ -701,7 +705,7 @@ class iluwaga(luwaga):
 </form> 
 <br>
 
-<form class="meinoutarea">
+<form class="meinoutarea" id="meformpython14">
 <div id="me_code_section">  <h4 id="mescpython14">14. Error Handling</h4> </div>
 <textarea class="meinputarea" id="meinpython14" cols="65" rows="10">
 try:
@@ -741,7 +745,7 @@ finally:
 </form> 
 <br>
 
-<form class="meinoutarea">
+<form class="meinoutarea" id="meformpython15">
 <div id="me_code_section">  <h4 id="mescpython15">15. Regular Expressions</h4> </div>
 <textarea class="meinputarea" id="meinpython15" cols="65" rows="10">
 import re
@@ -763,7 +767,7 @@ print(re.search("A","Aenoroon").group())
 </form> 
 <br>
 
-<form class="meinoutarea">
+<form class="meinoutarea" id="meformpython16">
 <div id="me_code_section">  <h4 id="mescpython16">16. Lambda Functions</h4> </div>
 <textarea class="meinputarea" id="meinpython16" cols="65" rows="10">
 def addx(x):
@@ -818,12 +822,14 @@ for (i = 1; i <= numSections; i++) {
 	section = document.getElementById("mein" + me_lang + i);
 	me_section_list["mein" + me_lang + i] = CodeMirror.fromTextArea(section, {
 	lineNumbers : true,
+	viewportMargin : 50
 	});
 	me_section_list["mein" + me_lang + i].id = "memirror" + me_lang + i;
 	
+	document.getElementById("meform" + me_lang + i).querySelector(".CodeMirror").style = "height: " + (me_section_list["mein" + me_lang + i].doc.height + 40) + "px";
 	
 }
-	document.getElementById("meform" + me_lang + 1).children[2].height = me_section_list["mein" + me_lang + 1].doc.height + "px";
+
 
 function selectpart() {
     var text = "";
