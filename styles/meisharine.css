@@ -11,7 +11,7 @@
 	height: 100%;
 	width: 15%;
 	position: fixed;
-	z-index: 1;
+	z-index: 10;
 	top: 0;
 	left: 0;
 #	right: 0;
@@ -81,7 +81,7 @@ a:active {
 	color: 3030f0;
 }
 .meinoutarea {
-	width: 500%;
+	width: 84%;
 #    font-family: 'Helvetica', sans-serif;
     padding: 0% 0% 0% 16%;
 #	position: relative;
@@ -93,6 +93,7 @@ a:active {
 }
 .meinputarea {
     font-family: 'Helvetica', sans-serif;
+	width: 50%;
 #    padding: 0% 0% 0% 5%;
 #	position: relative;
 #    display: block;
@@ -103,10 +104,10 @@ a:active {
 }
 .meoutputarea {
 #    font-family: 'Helvetica', sans-serif;
+	width: 44%;
     padding: 0% 0% 0% 1%;
 #    display: block;
 #	position: relative;
-    float: left;
-	width: 40%;
+    float: right;
     text-align: left;
 }

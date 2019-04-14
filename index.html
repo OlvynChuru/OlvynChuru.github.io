@@ -2,14 +2,20 @@
 	<head>
 		<title>Code Examples - Isharine Code</title>
 		<link rel="stylesheet" href="styles/meisharine.css" />
+
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script> 
 <!--		<script src="http://www.skulpt.org/static/skulpt.min.js" type="text/javascript"></script> 
 		<script src="http://www.skulpt.org/static/skulpt-stdlib.js" type="text/javascript"></script> -->
 		<script src="JS/skulpt.min.js" type="text/javascript"></script>
 		<script src="JS/skulpt-stdlib.js" type="text/javascript"></script>
+		<script src="codemirror/lib/codemirror.js"></script>
+		<link rel="stylesheet" href="codemirror/lib/codemirror.css">
+		<script src="codemirror/mode/python/python.js"></script>
 	</head>
     <body bgcolor="#f1f3f4">
-
+<script type="text/javascript"> 
+var me_lang = "python";
+</script>
         <h1 id="me_header">Isharine Code</h1>
 		
         <h3 id="me_subheader">Python Code Examples</h3>
@@ -59,6 +65,8 @@ function builtinRead(x) {
 // configure the output function
 // call Sk.importMainWithBody()
 function runit(meinput, meoutput) { 
+	me_section_list[meinput].save();
+	console.log(me_section_list[meinput]);
 	document.getElementById("meoutputstore").innerHTML = ''; 
 	var prog = document.getElementById("meselectionstore").value;
 	var previous = document.getElementById("meselectionprevious").value;
@@ -84,15 +92,14 @@ function runit(meinput, meoutput) {
    },
        function(err) {
 	   mypre.innerHTML = mypre.innerHTML + err.toString();
-   });
+   });$
 
 	document.getElementById("meselectionprevious").value = document.getElementById("meselectionstore").value;
 
 } 
 
 </script> 
-
-<form class="meinoutarea">
+<form class="meinoutarea" id="meformpython1">
 <div id="me_code_section">  <h4 id="mescpython1">1. Introduction</h4> </div>
 <textarea class="meinputarea" id="meinpython1" cols="65" rows="10">
 # Welcome!
@@ -108,9 +115,8 @@ import this
 
 </textarea>
 <button type="button" onclick="runit('meinpython1','meoutpython1')">Run</button>
-<pre class="meoutputarea" id="meoutpython1" ></pre> 
+<pre class="meoutputarea" id="meoutpython1" ></pre>
 </form> 
-
 <br>
 
 <form class="meinoutarea">
@@ -781,24 +787,43 @@ print(addsix(14))
 var i = 1;
 var moreSections = true;
 var section;
-var section_link;
-var section_title;
+var numSections = 0;
 while (moreSections == true) {
-	section = document.getElementById("meinpython" + i);
+	section = document.getElementById("mein" + me_lang + i);
 
 	if (section != null) {
-		section.rows = section.innerHTML.match(/\n/g).length + 1;
-		section_link = document.getElementById("melinkpython" + i);
-		section_title = document.getElementById("mescpython" + i);
-		if (section_link != null && section_title != null) {
-			section_link.innerHTML = section_title.innerHTML;
-		}
+		i++;
 	}
 	else {
 		moreSections = false;
+		numSections = i - 1;
 	}
-	i++;
+
 }
+console.log(numSections);
+var section_link;
+var section_title;
+
+for (i = 1; i <= numSections; i++) {
+	section = document.getElementById("mein" + me_lang + i);
+	section.parentNode.height = (section.innerHTML.match(/\n/g).length + 1) * 10;
+	section_link = document.getElementById("melink" + me_lang + i);
+	section_title = document.getElementById("mesc" + me_lang + i);
+	if (section_link != null && section_title != null) {
+		section_link.innerHTML = section_title.innerHTML;
+	}
+}
+var me_section_list = [];
+for (i = 1; i <= numSections; i++) {
+	section = document.getElementById("mein" + me_lang + i);
+	me_section_list["mein" + me_lang + i] = CodeMirror.fromTextArea(section, {
+	lineNumbers : true,
+	});
+	me_section_list["mein" + me_lang + i].id = "memirror" + me_lang + i;
+	
+	
+}
+	document.getElementById("meform" + me_lang + 1).children[2].height = me_section_list["mein" + me_lang + 1].doc.height + "px";
 
 function selectpart() {
     var text = "";
@@ -813,9 +838,8 @@ function selectpart() {
     } else if (window.getSelection) {
         text = window.getSelection().toString();
     }
-	console.log(document.activeElement.id);
-	if (/mein.+[0-9]+/.test(document.activeElement.id) == true) {
-		document.getElementById("meselectionfield").value = document.activeElement.id;
+	if (document.activeElement.tagName == "TEXTAREA") {
+		document.getElementById("meselectionfield").value = document.activeElement.parentNode.parentNode.parentNode.querySelector(".meinputarea").id;
 		console.log(document.getElementById("meselectionfield").value);
 	}
     return text;
@@ -823,6 +847,7 @@ function selectpart() {
 
 document.onmouseup = document.onkeyup = document.onselectionchange = function() {
   document.getElementById("meselectionstore").value = selectpart();
+  console.log(document.getElementById("meselectionstore").value);
 };
 
 </script> 
