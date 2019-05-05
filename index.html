@@ -883,7 +883,7 @@ function loadDoc() {
 	console.log(this.responseText);
 }
   xhttp.addEventListener("load", reqListener);
-  xhttp.open("POST", "https://api.hackerearth.com/v3/code/run/", true);
+  xhttp.open("POST", "https://api.hackerearth.com/code/run/", true);
 //  xhttp.setRequestHeader("Content-type", "application/json");
   xhttp.send(config);
 }
