@@ -857,5 +857,35 @@ document.onmouseup = document.onkeyup = document.onselectionchange = function() 
 };
 
 </script> 
+		<button type="button" onclick="loadDoc()">Request data</button>
+
+<p id="demo"></p>
+ 
+<script>
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+	console.log(this.responseText);
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML = this.responseText;
+    }
+  };
+  const config = {
+      client_secret:'27e379779a4936b06d782e9ec8a64203ba99eea6',
+      time_limit:5,
+      memory_limit:223246,
+      source:'print(5)',
+	  input:"",
+      lang:"PYTHON"
+  };
+  function reqListener () {
+	console.log(this.responseText);
+}
+  xhttp.addEventListener("load", reqListener);
+  xhttp.open("POST", "https://api.hackerearth.com/v3/code/run/", true);
+//  xhttp.setRequestHeader("Content-type", "application/json");
+  xhttp.send(config);
+}
+</script>
     </body>
 </html>
