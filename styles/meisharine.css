@@ -1,7 +1,7 @@
 #me_header {
-    font-family: 'Helvetica', sans-serif;
+    font-family: 'Arial', serif;
     text-align: center;
-    color: 80868b;
+    color: 404040;
     font-size: 72px;
 }
 #me_navbar {
@@ -22,11 +22,12 @@
 }
 
 #me_subheader {
-    font-family: 'Helvetica', sans-serif;
+    font-family: 'Arial', serif;
     text-align: center;
-    color: 80868b;
-    font-size: 48px;
+    color: 404040;
+    font-size: 36px;
 }
+
 #me_code_section {
     display: block;
 #    float: left;
@@ -45,9 +46,9 @@ button {
 #    text-align: center;
 }
 h3 {
-    font-family: 'Helvetica', sans-serif;
+    font-family: 'Arial', serif;
     font-size: 50px;
-    line-height: 10px;
+#    line-height: 10px;
 	color: 80868b;
 }
 p, ul {
@@ -57,11 +58,13 @@ p, ul {
 	#font-weight: bold;
 }
 a:link {
+  color: 6060D0;
   background-color: transparent; 
   text-decoration: none;
 }
 
 a:visited {
+  color: 6060D0;
   background-color: transparent;
   text-decoration: none;
 }
@@ -80,6 +83,75 @@ a:active {
 	
 	color: 3030f0;
 }
+.memodheader {
+    font-family: 'Arial', serif;
+    text-align: center;
+    color: 404040;
+    font-size: 36px;
+}
+.memodsubheader {
+    font-family: 'Arial', serif;
+    text-align: center;
+    color: 404040;
+    font-size: 18px;
+}
+.memoddescription {
+    font-family: 'Arial', serif;
+	padding: 0% 16% 0% 16%;
+    text-align: left;
+    color: 404040;
+    font-size: 24px;
+}
+.mewritingarea {
+    font-family: 'Arial', serif;
+#    text-align: center;
+	padding: 10% 5% 5% 5%;
+    color: 404040;
+    font-size: 36px;
+}
+.meback {
+	width: 84%;
+    font-family: 'Arial', serif;
+    padding: 0% 0% 0% 16%;
+#	position: relative;
+    display: block;
+    float: left;
+#    text-align: center;
+	color: 404040;
+}
+.medualblock {
+	height: 480px;
+	width: 84%;
+#    font-family: 'Helvetica', sans-serif;
+    padding: 0% 0% 0% 16%;
+#	position: relative;
+    display: block;
+    float: left;
+#    text-align: center;
+	color: 40464b;
+#	left: 160px;
+}
+.medualblockleft {
+ #   font-family: 'Helvetica', sans-serif;
+	width: 50%;
+#    padding: 0% 0% 0% 5%;
+#	position: relative;
+#    display: block;
+    float: left;
+#    text-align: center;
+	color: 40464b;
+#	left: 160px;
+}
+.medualblockright {
+#    font-family: 'Helvetica', sans-serif;
+	width: 44%;
+#    padding: 0% 0% 0% 1%;
+#    display: block;
+#	position: relative;
+    float: left;
+    text-align: left;
+}
+
 .meinoutarea {
 #	height: 300px;
 	width: 84%;
